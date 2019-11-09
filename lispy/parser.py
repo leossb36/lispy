@@ -17,6 +17,12 @@ class LispTransformer(InlineTransformer):
     def quote(self, *args):
         return [Symbol.QUOTE, *args]
 
+    # def procedure(self, *args):
+    #     return [Symbol.LET, *args]
+
+    # def infix(self, *args):
+    #     return [Symbol.COLON, *args]
+
     def inteiro(self, value):
         return int(value)
 

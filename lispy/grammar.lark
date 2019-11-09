@@ -13,12 +13,20 @@
 ?bool : TRUE -> boolean
       | FALSE -> boolean
 
-quote : ("'"expr*) -> quote
+quote : "'"expr* -> quote
+
+procedure : "(" list* ")"
+
+// infix : "[" expr* "]"
+//        | "{" expr* "}"
+
+// colon : (expr*)? -> colon
 
 ?atom  : SYMBOL -> simbolo
        | number
        | name
        | bool
+       | quote
        
 
 // Terminais
@@ -28,7 +36,6 @@ INT.1     : /-?\d+/
 FLOAT.2   : /-?\d+\.\d+/
 TRUE      : /#t/
 FALSE     : /#f/
-
 
 %ignore /\s+/
 %ignore /;[^\n]*/

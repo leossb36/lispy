@@ -47,6 +47,7 @@ Symbol.ADD = Symbol('+')
 Symbol.SUB = Symbol('-')
 Symbol.MUL = Symbol('*')
 Symbol.DIV = Symbol('/')
+# Symbol.COLON = Symbol(':')
 
 class _Var:
     def __getattr__(self, attr):

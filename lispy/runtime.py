@@ -40,16 +40,22 @@ def eval(x, env=None):
     # Comando (quote <expression>)
     # (quote (1 2 3))
     elif head == Symbol.QUOTE:
-        pass
+        return args[0] # return the firs element -> "'"
+
     # # Comando (let <expression> <expression>)
     # # (let ((x 1) (y 2)) (+ x y))
     # elif head == Symbol.LET:
-    #     return NotImplemented
+    #     (bindings, body) = args
+    #     proc = eval(bindings, env)
 
     # # Comando (lambda <vars> <body>)
     # # (lambda (x) (+ x 1))
     # elif head == Symbol.LAMBDA:
-    #     return NotImplemented
+    #     (formals, body) = args
+    #     def procedure(*values):
+    #         local = dict(zip(formals, values))
+    #         return eval(body, ChainMap(local, env))
+    #     return procedure
 
     # Lista/chamada de funções
     # (sqrt 4)
